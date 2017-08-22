@@ -56,17 +56,21 @@ def solve(equation):
   
   # remember pemdas
   
-  eq=solve_parens(eq)
+  #eq=solve_parens(eq)
   
   for step in ["^","*","/","+","-"]:
     eq=do_pemdas_step(eq,step)
   
-  print eq
+  if len(eq) == 1:
+    return eq[0]
+  else:
+    return float.NaN
 
 
 
 
-
+'''
 while(1):
-  print solve_parens(raw_input())
-
+  #print solve_parens(raw_input())
+  print solve(raw_input())
+'''

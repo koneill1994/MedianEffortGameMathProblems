@@ -3,6 +3,8 @@
 
 import random
 
+import mathsolver as ms
+
 # python2 compatibility##
 try:
    input = raw_input
@@ -31,46 +33,6 @@ max_operations=['+','-','*','/']
 def ScaleXtoY(x,xmax,ymax,ymin):
   return max(int(round((1.0*x/xmax)*ymax)),ymin)
 
-def char_to_operation(a,b,char):
-  if char == '+':
-    return a+b
-  elif char == '-':
-    return a-b
-  elif char == '*':
-    return a*b
-  elif char == '/':
-    return a/b
-  else:
-    return float('nan')
-
-
-
-def ComputeAnswer(nums,ops):
-  
-  if len(nums) not == len(ops)+1:
-    print("ERROR: Number of NUMS and OPS do not correspond")
-  
-  #interleave the two lists
-  eq=[]
-  
-  for x in range(ops):
-    eq.append(nums[x])
-    eq.append(ops[x])
-  eq.append(nums[-1])
-  
-  # nums are on the odd numbers, ops are on the evens
-  
-  # pemdas
-   
-  # m
-  mults=[]
-  for x in range(len(eq)):
-    if eq[x]=="*":
-      mults.append(x)
-  
-  ### this is a work in progress, find a way to make it work
-  
-  
   
 while(1):
   
@@ -105,14 +67,16 @@ while(1):
     
   print(s)
   
+  correct_ans = ms.solve(s)
+  
   
   answer = input("answer:")
   if answer=="":
     answer="0"
-  if int(answer)==sum(numbers):
+  if int(answer)==correct_ans:
     print("correct!")
   else:
-    print("incorrect, sum is "+str(sum(numbers)))
+    print("incorrect, sum is "+str(correct_ans))
   
   
   
