@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import random
 =======
 import random, time, os
@@ -18,9 +19,17 @@ import random, time, os
 =======
 import random, os
 >>>>>>> 90dfbef901fe90cf7c6e239b390fe4826ff8a3ad
+=======
+import random, time, os
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 
 import mathsolver as ms
 
+# python2 compatibility##
+try:
+   input = raw_input
+except NameError:
+   pass
 ########################
 
 ## parameters
@@ -35,10 +44,9 @@ max_digits=2
 max_terms=4
 # the maximum number of numbers one is asked to do operations on
 
+
 max_operations=['+','-','*','/']
 # different operations to be performed on the numbers, in order of increasing difficulty
-# all supported is ['+','-','*','/','^']
-
 
 #######################
 
@@ -48,9 +56,12 @@ def ScaleXtoY(x,xmax,ymax,ymin):
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 =======
 >>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 =======
@@ -85,14 +96,20 @@ def Create_Logfile(subj_id):
   f = open('./logs/logfile_' + subj_id + '.csv','w')
   WriteHeader(f)
   return f
+<<<<<<< HEAD
 =======
 >>>>>>> 90dfbef901fe90cf7c6e239b390fe4826ff8a3ad
+=======
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 
 def ScaleXtoY(x,xmax,ymax,ymin):
   return max(int(round((1.0*x/xmax)*ymax)),ymin)
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 
 
 start_time = time.time()
@@ -105,6 +122,9 @@ logf=Create_Logfile(subj_id)
   
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
+=======
 >>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 =======
 >>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
@@ -117,7 +137,13 @@ while(1):
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     current_level=int(input("Difficulty Level? "))
+=======
+    lvl = input("Difficulty Level? ")
+    if lvl == '': lvl = 1
+    current_level=int(lvl)
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 =======
     lvl = input("Difficulty Level? ")
     if lvl == '': lvl = 1
@@ -138,11 +164,14 @@ while(1):
       print("Allowed levels: 1 through "+str(no_of_levels))
     else:
       break
+<<<<<<< HEAD
 =======
 def GenerateEquationAndAnswer(lvl):
   if lvl == '': lvl = 1
   current_level=int(lvl)
 >>>>>>> 90dfbef901fe90cf7c6e239b390fe4826ff8a3ad
+=======
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
   
   # generate equation & answer
   terms=ScaleXtoY(current_level,no_of_levels,max_terms,2)
@@ -166,6 +195,7 @@ def GenerateEquationAndAnswer(lvl):
       s+=ops[t]
     
 <<<<<<< HEAD
+<<<<<<< HEAD
   print(s)
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -177,12 +207,17 @@ def GenerateEquationAndAnswer(lvl):
 >>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 =======
 >>>>>>> 90dfbef901fe90cf7c6e239b390fe4826ff8a3ad
+=======
+  print(s)
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
   eq=s
+  presented = time.time() - start_time
   
 >>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
   
   correct_ans = ms.solve(s)
   
+<<<<<<< HEAD
 <<<<<<< HEAD
   
   answer = input("answer:")
@@ -201,6 +236,12 @@ def GenerateEquationAndAnswer(lvl):
   answered = time.time() - start_time
   
 >>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
+=======
+  
+  answer = input("answer:")
+  answered = time.time() - start_time
+  
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
   if answer=="":
     answer="0"
   if int(answer)==correct_ans:
@@ -211,9 +252,12 @@ def GenerateEquationAndAnswer(lvl):
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   
   
 =======
+=======
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 =======
 >>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 =======
@@ -225,6 +269,7 @@ def GenerateEquationAndAnswer(lvl):
 logf.close()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 =======
 >>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
@@ -234,3 +279,5 @@ logf.close()
   return (eq,correct_ans)
 
 >>>>>>> 90dfbef901fe90cf7c6e239b390fe4826ff8a3ad
+=======
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
