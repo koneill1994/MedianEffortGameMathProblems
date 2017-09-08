@@ -3,7 +3,11 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import random
+=======
+import random, time, os
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 =======
 import random, time, os
 >>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
@@ -43,8 +47,11 @@ def ScaleXtoY(x,xmax,ymax,ymin):
   return max(int(round((1.0*x/xmax)*ymax)),ymin)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 =======
 >>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 def WriteHeader(logfile):
@@ -93,6 +100,9 @@ logf=Create_Logfile(subj_id)
 
   
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
+=======
 >>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 =======
 >>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
@@ -102,7 +112,13 @@ while(1):
   while(1):
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     current_level=int(input("Difficulty Level? "))
+=======
+    lvl = input("Difficulty Level? ")
+    if lvl == '': lvl = 1
+    current_level=int(lvl)
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 =======
     lvl = input("Difficulty Level? ")
     if lvl == '': lvl = 1
@@ -143,7 +159,10 @@ while(1):
   print(s)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 =======
 >>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
   eq=s
@@ -157,6 +176,11 @@ while(1):
   answer = input("answer:")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  answered = time.time() - start_time
+  
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 =======
   answered = time.time() - start_time
   
@@ -174,9 +198,12 @@ while(1):
   
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   
   
 =======
+=======
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 =======
 >>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
   WriteLine(logf,current_level,presented,eq,correct_ans,answer,answered)
@@ -185,6 +212,9 @@ while(1):
   
 logf.close()
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
+=======
 >>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 =======
 >>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
