@@ -2,7 +2,11 @@
 # Kevin O'Neill
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import random
+=======
+import random, time, os
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 =======
 import random, time, os
 >>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
@@ -38,8 +42,11 @@ max_operations=['+','-','*','/']
 def ScaleXtoY(x,xmax,ymax,ymin):
   return max(int(round((1.0*x/xmax)*ymax)),ymin)
 
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 def WriteHeader(logfile):
   c=',' # for csv
   s = ''
@@ -85,13 +92,22 @@ subj_id = raw_input('enter subject id: ')
 logf=Create_Logfile(subj_id)
 
   
+<<<<<<< HEAD
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
+=======
 >>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
   
 while(1):
   
   while(1):
 <<<<<<< HEAD
+<<<<<<< HEAD
     current_level=int(input("Difficulty Level? "))
+=======
+    lvl = input("Difficulty Level? ")
+    if lvl == '': lvl = 1
+    current_level=int(lvl)
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 =======
     lvl = input("Difficulty Level? ")
     if lvl == '': lvl = 1
@@ -126,7 +142,10 @@ while(1):
     
   print(s)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
   eq=s
   presented = time.time() - start_time
   
@@ -137,6 +156,11 @@ while(1):
   
   answer = input("answer:")
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  answered = time.time() - start_time
+  
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
 =======
   answered = time.time() - start_time
   
@@ -149,12 +173,18 @@ while(1):
     print("incorrect, sum is "+str(correct_ans))
   
 <<<<<<< HEAD
+<<<<<<< HEAD
   
   
 =======
+=======
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
   WriteLine(logf,current_level,presented,eq,correct_ans,answer,answered)
   
   
   
 logf.close()
+<<<<<<< HEAD
+>>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
+=======
 >>>>>>> parent of 90dfbef... Fixed up math solver code so it plays nice with otree
