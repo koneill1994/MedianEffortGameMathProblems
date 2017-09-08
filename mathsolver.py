@@ -18,6 +18,7 @@ def op(a,b,o):
   else:
     return float.NaN
 
+
 def do_pemdas_step(eq,step):
   newlist=[]
   c=0
@@ -31,6 +32,7 @@ def do_pemdas_step(eq,step):
     c+=1
   return newlist
   
+# doesn't work correctly, either fix it or remove it
 def solve_parens(eq):
   for x in range(len(eq)):
     if eq[x]=="(":
@@ -52,7 +54,6 @@ def solve_parens(eq):
   
 def solve(equation):
   eq=re.split('(\D)+',equation)
-  print eq
   
   # remember pemdas
   
@@ -65,12 +66,3 @@ def solve(equation):
     return eq[0]
   else:
     return float.NaN
-
-
-
-
-'''
-while(1):
-  #print solve_parens(raw_input())
-  print solve(raw_input())
-'''
